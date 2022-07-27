@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__button {
+  width: 15%;
+  height: auto;
+  border: none;
+}
+.nav__button__icon {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
