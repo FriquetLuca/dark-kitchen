@@ -17,6 +17,7 @@ html, body {
   text-align: center;
   color: #b9314f;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -61,4 +62,4 @@ html, body {
      object-fit: contain;
   height: 100%;
   width: 100%;
-}/*# sourceMappingURL=style.css.map */
+}
