@@ -3,11 +3,6 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    z-index: -1;
-    filter: grayscale(0.1);
 
     &__text {
         display: flex;
