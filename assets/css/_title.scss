@@ -1,0 +1,41 @@
+.title {
+    background-image: url("assets/img/title_background.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    filter: grayscale(0.1);
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__main {
+            font-family: $roboto-font;
+            margin-top: 80px;
+            font-size: 4.5rem;
+        }
+
+        &__subtitle {
+            font-family: $hind-font;
+            font-size: 2.5rem;
+        }
+
+        &__description {
+            font-family: $hind-font;
+            font-size: 1.2rem;
+            margin: 30px;
+            line-height: 1.2;
+
+            @media screen and (min-width: 1000px) {
+                margin: 80px;
+                line-height: 1.3;
+            }
+        }
+    }
+}
