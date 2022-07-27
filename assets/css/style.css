@@ -1,0 +1,19 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #151515;
+  color: #f4f4f4;
+}
+
+#dinner {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.dinner_item_picture {
+  text-align: center;
+}
+.dinner_item_content {
+  text-align: center;
+  color: #b9314f;
+}

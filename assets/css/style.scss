@@ -1,0 +1,16 @@
+// Text Color
+$textColor-light: #f4f4f4;
+$textColor-dark: #cfcef6;
+// Background Color
+$bgColor-light: #f1a66a;
+$bgColor-middle: #b9314f;
+$bgColor-dark: #151515;
+// Default Style
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: $bgColor-dark;
+    color: $textColor-light;
+}
+// ALL CSS IMPORTS HERE
+@import "dinner";

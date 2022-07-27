@@ -1,0 +1,14 @@
+#dinner {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.dinner_item {
+    &_picture {
+        text-align: center;
+    }
+    &_content {
+        text-align: center;
+        color: $bgColor-middle;
+    }
+}
