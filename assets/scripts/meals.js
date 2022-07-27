@@ -24,6 +24,7 @@
          let result = '';
          for(let i = 0; i < ingredients.length; i++)
          {
+         console.log(ingredients[i]);
              if(i == 0)
              {
                  // Make it so the first letter is upper case for the first ingredient
@@ -47,18 +48,13 @@
       * @param {*} item The actual database dinner item passed.
       */
      const createDinnerContent = (contentDiv, item) => {
-         let name = createItem('h1', 'dinner_item_content_name');
+         let name = createItem('h1', 'dinner__item__content__name');
          name.innerText = item.name;
-         let ingredients = createItem('p', 'dinner_item_content_ingredients');
+         let ingredients = createItem('p', 'dinner__item__content__ingredients');
          ingredients.innerText = appendIngredients(item.ingredients);
-         let price = createItem('p', 'dinner_item_content_price');
-         price.innerText = `${item.price} €`;
-         let shop = createItem('p', 'dinner_item_content_shop');
-         shop.innerText = 'Shop';
+         
          contentDiv.appendChild(name);
          contentDiv.appendChild(ingredients);
-         contentDiv.appendChild(price);
-         contentDiv.appendChild(shop);
      }
      /**
       * Create the basic hierarchy of the dinner element.
@@ -70,14 +66,24 @@
          {
              dinnerDiv.classList.add(category);
          }
-         let picture = createItem('img', 'dinner_item_picture');
+         let picture = createItem('img', 'dinner__item__picture');
          picture.setAttribute('src', item.picture);
          picture.setAttribute('alt', item.name.toUpperCase());
-         let content = createItem('div', 'dinner_item_content');
+         let content = createItem('div', 'dinner__item__content');
          // Create the content
          createDinnerContent(content, item);
+ 
+         let command = createItem('div', 'dinner__item__command');
+         let price = createItem('p', 'dinner__item__command__price');
+         price.innerText = `${item.price} €`;
+         let shop = createItem('p', 'dinner__item__command__shop');
+         shop.innerText = 'Shop';
+         command.appendChild(price);
+         command.appendChild(shop);
+ 
          dinnerDiv.appendChild(picture);
          dinnerDiv.appendChild(content);
+         dinnerDiv.appendChild(command);
      };
      /**
       * Create the dinner HTML element.
@@ -85,8 +91,7 @@
       * @return {HTMLElement} The generated dinner HTML element.
       */
      const initializeDinnerElement = (item) => {
-         console.log(item);
-         let dinnerItem = createItem('div', 'dinner_item');
+         let dinnerItem = createItem('div', 'dinner__item');
          createDinner(dinnerItem, item);
          return dinnerItem;
      };
@@ -95,4 +100,4 @@
      {
          dinnerContainer.appendChild(initializeDinnerElement(item));
      }
- };
+ }

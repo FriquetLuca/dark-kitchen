@@ -1,14 +1,69 @@
-#dinner {
-    display: flex;
-    flex-flow: column nowrap;
+$dinner-baseMargin: 10px;
+$dinner-maxItemWidth: 300px;
+$dinner-minItemWidth: $dinner-maxItemWidth - 2 * $dinner-baseMargin;
+
+@mixin cardResponse {
+    width: 100%;
+    min-width: max($dinner-minItemWidth, 100%);
+}
+@mixin horizontalMargin {
+    margin-left: $dinner-baseMargin;
+    margin-right: $dinner-baseMargin;
 }
 
-.dinner_item {
-    &_picture {
-        text-align: center;
+#dinner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+    gap: $dinner-baseMargin * 3.5 $dinner-baseMargin;
+    width: 100%;
+}
+.dinner__item {
+    max-width: $dinner-maxItemWidth + calc($dinner-maxItemWidth / 6);
+    position: relative;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: $bgColor-middlelight;
+    &__picture {
+        border-top-right-radius: 25px;
+        @include cardResponse;
     }
-    &_content {
-        text-align: center;
-        color: $bgColor-middle;
+    &__content {
+        @include cardResponse;
+        &__name {
+            margin-top: calc($dinner-baseMargin / 2);
+            @include horizontalMargin;
+            font-size: large;
+            color: $textColor-dark;
+        }
+        &__ingredients {
+            @include horizontalMargin;
+            font-size: medium;
+            color: $textColor-light;
+        }
+    }
+    &__command {
+        position: absolute;
+        width: 100px;
+        height: 4 * $dinner-baseMargin;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: $dinner-baseMargin;
+        right: 0;
+        bottom: 0;
+        margin-right: $dinner-baseMargin;
+        margin-bottom: -3 * $dinner-baseMargin;
+        border-radius: $dinner-baseMargin;
+        background-color: $bgColor-middle;
+        &__price {
+            margin-top: $dinner-baseMargin;
+            color: $textColor-dark;
+        }
+        &__shop {
+            margin-top: $dinner-baseMargin;
+        }
     }
 }
