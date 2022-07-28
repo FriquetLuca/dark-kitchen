@@ -9,7 +9,7 @@ html, body {
 #dinner {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: stretch;
   align-content: flex-start;
   gap: 35px 10px;

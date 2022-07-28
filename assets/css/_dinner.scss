@@ -14,7 +14,7 @@ $dinner-minItemWidth: $dinner-maxItemWidth - 2 * $dinner-baseMargin;
 #dinner {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: stretch;
     align-content: flex-start;
     gap: $dinner-baseMargin * 3.5 $dinner-baseMargin;
