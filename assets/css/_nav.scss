@@ -51,7 +51,7 @@ header {
                 width: 100%;
             }
             &:hover{
-                background-color: $bgColor-middlelight;
+                background: radial-gradient(circle, $bgColor-light 0%, rgba(218,118,33,1) 58%, $bgColor-middle 100%);
             }
         }
     }

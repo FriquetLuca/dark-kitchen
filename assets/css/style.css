@@ -133,7 +133,7 @@ header {
   width: 100%;
 }
 .nav__div__button .nav__button:hover {
-  background-color: #be793f;
+  background: radial-gradient(circle, #f1a66a 0%, rgb(218, 118, 33) 58%, #b9314f 100%);
 }
 
 /* The switch - the box around the slider */
@@ -175,11 +175,11 @@ header {
 }
 
 input:checked + .slider {
-  background-color: red;
+  background-color: #f1a66a;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px red;
+  box-shadow: 0 0 1px #b9314f;
 }
 
 input:checked + .slider:before {
@@ -211,17 +211,11 @@ p.button__title {
 }
 
 .button1 {
-  margin-left: 10px;
-  margin-bottom: 5px;
+  margin: 0px 0px 10px 10px;
 }
 .button1:hover {
   background-color: #f1a66a;
   border-radius: 10%;
-}
-
-div.button5 {
-  margin-right: 10px;
-  margin-bottom: 10px;
 }
 
 .title {
@@ -266,7 +260,7 @@ div.button5 {
     margin: 80px;
     line-height: 1.3;
   }
-}/*# sourceMappingURL=style.css.map */
+}
 
 .footer-dark {
   margin-top: 20px;

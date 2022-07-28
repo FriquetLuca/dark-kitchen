@@ -46,7 +46,7 @@
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px $bgColor-lightred;
+    box-shadow: 0 0 1px $bgColor-middle;
   }
   
   input:checked + .slider:before {
