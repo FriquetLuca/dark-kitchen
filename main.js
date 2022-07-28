@@ -147,8 +147,7 @@ for(let filterBtn of filterButtons)
         const menus = document.querySelectorAll('.dinner__item');
         for(let menu of menus)
         {
-            menu.style.visibility = 'visible';
-            menu.style.overflow = 'visible';
+            menu.style.display = 'block';
         }
         for(let fBtn of filterButtons)
         {
@@ -170,8 +169,7 @@ for(let filterBtn of filterButtons)
                 {
                     if(!nodeIncluded(menu.classList, pName.innerHTML)) // Not included
                     {
-                        menu.style.visibility = 'collapse';
-                        menu.style.overflow = 'hidden';
+                        menu.style.display = 'none';
                     }
                 }
             }
