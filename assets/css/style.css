@@ -65,7 +65,15 @@ html, body {
   color: #cfcef6;
 }
 .dinner__item__command__shop {
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #f1a66a;
+  border-radius: 5px;
+  border-color: rgb(234, 248, 108);
+}
+.dinner__item__command__shop__icon {
+  width: 16px;
+  height: 16px;
 }
 
 * {
@@ -75,6 +83,7 @@ html, body {
 header {
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 .nav {
