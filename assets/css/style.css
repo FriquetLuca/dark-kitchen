@@ -88,14 +88,15 @@ header {
 
 .nav {
   background-color: #f1a66a;
+  background: radial-gradient(circle, #f1a66a 0%, rgb(218, 118, 33) 58%, #b9314f 100%);
   position: relative;
   display: flex;
-  height: 80px;
+  height: 50px;
   justify-content: space-between;
 }
 .nav__div {
   display: inline-block;
-  width: 80px;
+  width: 50px;
   padding-bottom: 20px;
   position: relative;
 }
@@ -119,16 +120,20 @@ header {
   margin: 25px;
 }
 .nav__div__button .nav__button {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 15%;
   background-color: transparent;
 }
 .nav__div__button .nav__button__icon {
+  padding: 2px;
   -o-object-fit: contain;
      object-fit: contain;
   height: 100%;
   width: 100%;
+}
+.nav__div__button .nav__button:hover {
+  background-color: #be793f;
 }
 
 /* The switch - the box around the slider */

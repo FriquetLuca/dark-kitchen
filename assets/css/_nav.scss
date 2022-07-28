@@ -8,14 +8,15 @@ header {
 }
 .nav {
     background-color: $bgColor-light;
+    background: radial-gradient(circle, $bgColor-light 0%, rgba(218,118,33,1) 58%, $bgColor-middle 100%);
     position: relative;
     display: flex;
-    height: 80px;
+    height: 50px;
     justify-content: space-between;
 
     &__div {
         display: inline-block;
-        width: 80px;
+        width: 50px;
         padding-bottom: 20px;
         position: relative;
 
@@ -39,14 +40,18 @@ header {
         justify-content: center;
         margin: 25px;
         .nav__button {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            border-radius: 15%;
             background-color: transparent;
             &__icon {
+                padding: 2px;
                 object-fit: contain;
                 height: 100%;
                 width: 100%;
+            }
+            &:hover{
+                background-color: $bgColor-middlelight;
             }
         }
     }
