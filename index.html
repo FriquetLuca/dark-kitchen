@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Dark Kitchen</title>
         <link rel="icon" href="assets/img/logo.jpg">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link id="theme" rel="stylesheet" href="assets/css/style-light-theme.css">
         <script defer src="main.js"></script>
         <script defer src="assets/scripts/shopping_cart.js"></script>
     </head>
@@ -14,8 +14,8 @@
         <header>
             <nav class="nav">
                 <div class="nav__div__button">
-                    <button class="nav__button">
-                        <img class="nav__button__icon" src="assets/img/sun.png" alt="Dark mode button">
+                    <button class="nav__button" onclick="toggleTheme()">
+                        <img id="dark__theme" class="nav__button__icon" src="assets/img/sun.png" alt="Dark mode button">
                     </button>
                 </div>
                 <div class="nav__div">
@@ -45,43 +45,8 @@
                 </div>
             </section>
             <!---------------BUTTON FILTER----------------------->
-            <div class="button__filter">
-                <div class="button1">
-                    <p class="button__title">Oeuf</p>
-                    <label class="switch">
-                        <input type="checkbox" class="button__oeuf">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-                <div class="button2">
-                    <p>Frite</p>
-                    <label class="switch">
-                        <input type="checkbox" class="button__frite">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-                <div class="button3">
-                    <p>Pâtes</p>
-                    <label class="switch">
-                        <input type="checkbox" class="button__pate">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-                <div class="button4">
-                    <p>Pizza</p>
-                    <label class="switch">
-                        <input type="checkbox" class="button__pizza">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-                <div class="button5">
-                    <p>Maki</p>
-                    <label class="switch">
-                        <input type="checkbox" class="button__maki">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-            </div>
+            <div class="button__filter"></div>
+            
             <section id="dinner"></section>
         </main>
         <footer>

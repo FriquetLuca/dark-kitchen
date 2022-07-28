@@ -1,3 +1,13 @@
+// Set every checkbox to false by default
+let inputs = document.getElementsByTagName('input');
+for (let i = 0; i < inputs.length; i++)
+{
+    if (inputs[i].type == 'checkbox')
+    {
+        inputs[i].checked = false;
+    }
+}
+
 // DATABASE -------------------------------------------------
 const collection = [
     {
@@ -19,14 +29,14 @@ const collection = [
         picture: "assets/img/pacarbo.jpg", 
         ingredients: ["Poivre", "Sel", "Parmigiano Reggiano Galbani" ,"Pancetta", "jaunes d'oeufs", "Spaghetti"],
         price: 4,
-        categories: ["pate"],
+        categories: ["pâtes"],
     },
     {
         name: "Pâtes Bolognaise", 
         picture: "assets/img/pabolo.jpg", 
         ingredients: ["spaghettis", "boeuf haché","carotte", "champignons" , "tomates pelées", "oignons", "gousses d’ail" , "huile", "thym", "laurier" ,"sel" , "poivre"],
         price: 7,
-        categories: ["pate"],
+        categories: ["pâtes"],
     },
     {
         name: "Steak Frite", 
@@ -40,7 +50,7 @@ const collection = [
         picture: "assets/img/frimoule.jpg", 
         ingredients: ["moules","échalotes", "persil", "ail", "beurre", "vin blanc", "sel", "poivre", "pommes de terre", "Huile"],
         price: 9,
-        categories: ["frite",]
+        categories: ["frite"]
     }, 
     {
         name: "Maki Thon", 
@@ -62,110 +72,112 @@ const collection = [
         ingredients: [ "oeuf", "beurre", "sel", "poivre"],
         price: 4,
         categories: ["oeuf"]
-    },  {
+    },
+    {
         name: "Oeuf a la coque", 
         picture: "assets/img/oeufcoque.jpg", 
         ingredients: [ "oeuf", "beurre", "sel", "poivre", "persil"],
         price: 6,
         categories: ["oeuf"]
     },
-] 
+];
 
+function createCategoryHTML()
+{
+    const generateCategories = () => {
+        let x = [];
+        for(let element of collection)
+        {
+            for(let item of element.categories)
+            {
+                x.push(item);
+            }
+        }
+        const uniqueElement = (value, index, self) => {
+            return self.indexOf(value) === index;
+        }
+        return x.filter(uniqueElement);
+    }
+    const capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    let cats = generateCategories();
+    const btnFilt = document.querySelector('.button__filter');
+    for(let cat of cats)
+    {
+        const button1 = document.createElement('div');
+        button1.classList.add('button1');
+        button1.innerHTML = `
+        <p class="button__title">${capitalizeFirstLetter(cat)}</p>
+        <label class="switch">
+            <input type="checkbox" class="button__filter">
+            <span class="slider round"></span>
+        </label>
+        `;
+        btnFilt.appendChild(button1);
+    }
+}
+createCategoryHTML();
 // END DATABASE ------------------------------------------
 
-
 // FILTER------------------------------------------------------
-const oeufs = document.querySelectorAll('.button__oeuf');
-for(let oeuf of oeufs) {
-    oeuf.addEventListener("click", (event) => {
-        let allcards = document.querySelectorAll(".frite , .maki , .pizza , .pate");
-        for(let itemsoeuf of allcards) {
-            
-            if(oeuf.checked) {
-            itemsoeuf.style.display = "none";
-            }
-
-            else {
-                itemsoeuf.style.display = "block";
+// Hover element
+const filterButtons = document.querySelectorAll('.button__filter > .button1');
+for(let filterBtn of filterButtons)
+{
+    filterBtn.addEventListener("click", () => {
+        const menus = document.querySelectorAll('.dinner__item');
+        for(let menu of menus)
+        {
+            menu.style.display = 'block';
+        }
+        for(let fBtn of filterButtons)
+        {
+            let pName = fBtn.querySelector('.button__title');
+            let cBox = fBtn.querySelector('.switch > .button__filter');
+            if(cBox.checked)
+            {
+                const nodeIncluded = (nodeList, includedValue) => {
+                    for(let item of nodeList)
+                    {
+                        if(`${item}`.toLowerCase() == `${includedValue}`.toLowerCase())
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                };
+                for(let menu of menus)
+                {
+                    if(!nodeIncluded(menu.classList, pName.innerHTML)) // Not included
+                    {
+                        menu.style.display = 'none';
+                    }
+                }
             }
         }
-    } );
-    
+    });
 }
 
-const frites = document.querySelectorAll('.button__frite');
-for(let frite of frites) {
-    frite.addEventListener("click", (event) => {
-        let allcards = document.querySelectorAll(".oeuf , .maki , .pizza , .pate");
-        for(let itemsfrite of allcards) {
-            
-            if(frite.checked) {
-            itemsfrite.style.display = "none";
-            }
+// THEME
+function toggleTheme()
+{
+    let theme = document.getElementsByTagName('link')[1];
+    let currentBtn = document.getElementById('dark__theme');
+    if (theme.getAttribute('href') == './assets/css/style-light-theme.css')
+    {
+        theme.setAttribute('href', './assets/css/style-dark-theme.css');
+        currentBtn.setAttribute('src', 'assets/img/moon.png');
 
-            else {
-                itemsfrite.style.display = "block";
-            }
-        }
-    } );
-    
+    }
+    else
+    {
+        theme.setAttribute('href', './assets/css/style-light-theme.css');
+        currentBtn.setAttribute('src', 'assets/img/sun.png');
+    }
+    console.log(element);
 }
 
-const pates = document.querySelectorAll('.button__pate');
-for(let pate of pates) {
-    pate.addEventListener("click", (event) => {
-        let allcards = document.querySelectorAll(".oeuf , .maki , .pizza , .frite");
-        for(let itemspate of allcards) {
-            
-            if(pate.checked) {
-            itemspate.style.display = "none";
-            }
-
-            else {
-                itemspate.style.display = "block";
-            }
-        }
-    } );
-    
-}
-
-const pizzas = document.querySelectorAll('.button__pizza');
-for(let pizza of pizzas) {
-    pizza.addEventListener("click", (event) => {
-        let allcards = document.querySelectorAll(".oeuf , .maki , .frite , .pate");
-        for(let itemspizza of allcards) {
-            
-            if(pizza.checked) {
-            itemspizza.style.display = "none";
-            }
-
-            else {
-                itemspizza.style.display = "block";
-            }
-        }
-    } );
-    
-}
-
-const makis = document.querySelectorAll(".button__maki");
-for(let maki of makis) {
-    maki.addEventListener("click", (event) => {
-        let allcards = document.querySelectorAll(".oeuf , .pizza , .frite , .pate");
-        for(let itemsmaki of allcards) {
-            
-            if(maki.checked) {
-            itemsmaki.style.display = "none";
-            }
-
-            else {
-                itemsmaki.style.display = "block";
-            }
-        }
-    } );
-    
-}
-
-//END  FILTER -----------------------------------
 
 /**
  * Inject the HTML that will handle the list of meals people could buy based on a database.
@@ -193,7 +205,6 @@ function initializeDinner(dinnerDatabase)
         let result = '';
         for(let i = 0; i < ingredients.length; i++)
         {
-        console.log(ingredients[i]);
             if(i == 0)
             {
                 // Make it so the first letter is upper case for the first ingredient
