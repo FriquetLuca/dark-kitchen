@@ -199,7 +199,6 @@ div.button__filter {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid blue;
   background-color: #b9314f;
 }
 
@@ -352,4 +351,4 @@ p.button__title {
   opacity: 0.3;
   font-size: 13px;
   margin-bottom: 0;
-}
+}/*# sourceMappingURL=style.css.map */
