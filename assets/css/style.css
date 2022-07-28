@@ -7,20 +7,74 @@ html, body {
 
 #dinner {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 35px 10px;
+  width: 100%;
 }
 
-.dinner_item_picture {
-  text-align: center;
+.dinner__item {
+  max-width: 350px;
+  position: relative;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: #be793f;
 }
-.dinner_item_content {
-  text-align: center;
-  color: #b9314f;
+.dinner__item__picture {
+  border-top-right-radius: 25px;
+  width: 100%;
+  min-width: max(280px, 100%);
+}
+.dinner__item__content {
+  width: 100%;
+  min-width: max(280px, 100%);
+}
+.dinner__item__content__name {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: large;
+  color: #cfcef6;
+}
+.dinner__item__content__ingredients {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: medium;
+  color: #f4f4f4;
+}
+.dinner__item__command {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  right: 0;
+  bottom: 0;
+  margin-right: 10px;
+  margin-bottom: -30px;
+  border-radius: 10px;
+  background-color: #b9314f;
+}
+.dinner__item__command__price {
+  margin-top: 10px;
+  color: #cfcef6;
+}
+.dinner__item__command__shop {
+  margin-top: 10px;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+header {
+  position: fixed;
+  width: 100%;
 }
 
 .nav {
@@ -44,6 +98,10 @@ html, body {
   top: 50%;
   -o-object-fit: contain;
      object-fit: contain;
+  transition: all 0.15s ease-out;
+}
+.nav__div__logo:hover {
+  transform: scale(1.2);
 }
 .nav__div__button {
   display: flex;
