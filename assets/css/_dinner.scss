@@ -14,7 +14,7 @@ $dinner-minItemWidth: $dinner-maxItemWidth - 2 * $dinner-baseMargin;
 #dinner {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: stretch;
     align-content: flex-start;
     gap: $dinner-baseMargin * 3.5 $dinner-baseMargin;
@@ -63,7 +63,15 @@ $dinner-minItemWidth: $dinner-maxItemWidth - 2 * $dinner-baseMargin;
             color: $textColor-dark;
         }
         &__shop {
-            margin-top: $dinner-baseMargin;
+            margin-top: calc($dinner-baseMargin / 2);
+            margin-bottom: calc($dinner-baseMargin / 2);
+            background-color: rgba($color: $bgColor-light, $alpha: 1.0);
+            border-radius: 5px;
+            border-color: rgb(234, 248, 108);
+            &__icon {
+                width: 16px;
+                height: 16px;
+            }
         }
     }
 }
