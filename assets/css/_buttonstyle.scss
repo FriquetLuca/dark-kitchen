@@ -42,11 +42,11 @@
   }
   
   input:checked + .slider {
-    background-color: red;
+    background-color: $bgColor-light;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px red;
+    box-shadow: 0 0 1px $bgColor-lightred;
   }
   
   input:checked + .slider:before {
@@ -68,11 +68,26 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border: 1px solid blue;
+    background-color: $bgColor-middle;
   }
 
   p.button__title {
-    font-family: $roboto-font
+    font-family: $roboto-font;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
 
   }
+
+  .button1 {
+    margin: 0px 0px 10px 10px;
+  
+    &:hover {
+      background-color:$bgColor-light ;
+      border-radius: 10%;
+    }
+  }
+
 
   // END BUTTON STYLE ---------------------------
