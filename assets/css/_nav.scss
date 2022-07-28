@@ -1,9 +1,8 @@
 * {
     box-sizing: border-box;
-    margin: 0;
 }
 .nav {
-    background-color: #f1a66a;
+    background-color: $bgColor-light;
     position: relative;
     display: flex;
     height: 80px;
