@@ -159,7 +159,20 @@ for(let filterBtn of filterButtons)
     });
 }
 
-//END  FILTER -----------------------------------
+// THEME
+function toggleTheme()
+{
+    let theme = document.getElementsByTagName('link')[1];
+    if (theme.getAttribute('href') == './assets/css/style-light-theme.css')
+    {
+        theme.setAttribute('href', './assets/css/style-dark-theme.css');
+    }
+    else
+    {
+        theme.setAttribute('href', './assets/css/style-light-theme.css');
+    }
+}
+
 
 /**
  * Inject the HTML that will handle the list of meals people could buy based on a database.
