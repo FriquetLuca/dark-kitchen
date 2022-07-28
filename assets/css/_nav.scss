@@ -4,6 +4,7 @@
 header {
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 .nav {
     background-color: $bgColor-light;
@@ -25,7 +26,7 @@ header {
             position: absolute;
             top: 50%;
             object-fit: contain;
-            transition: all 0.15s ease-out;
+            transition: all 0.15s ease-in;
             &:hover {
                 transform: scale(1.2);
             }
