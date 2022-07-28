@@ -131,10 +131,6 @@ header {
   width: 100%;
 }
 
-.button__filter {
-  margin-top: 100px;
-}
-
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -198,6 +194,10 @@ div.button__filter {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+p.button__title {
+  font-family: Roboto, sans-serif;
 }
 
 .title {
