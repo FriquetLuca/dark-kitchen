@@ -120,24 +120,6 @@ function createCategoryHTML()
 createCategoryHTML();
 // END DATABASE ------------------------------------------
 
-const getCategoryItems = (catt) => {
-    const getClasses = (cat) => {
-        let result = '';
-        for(let i = 0; i < cat.length; i++)
-        {
-            if(i != cat.length - 1)
-            {
-                result = `${result}.${cat[i]}, `;
-            }
-            else
-            {
-                result = `${result}.${cat[i]}`;
-            }
-        }
-        return result;
-    };
-    return document.querySelectorAll(getClasses(catt));
-}
 // FILTER------------------------------------------------------
 // Hover element
 const filterButtons = document.querySelectorAll('.button__filter > .button1');
