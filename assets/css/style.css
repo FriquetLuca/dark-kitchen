@@ -72,6 +72,11 @@ html, body {
   box-sizing: border-box;
 }
 
+header {
+  position: fixed;
+  width: 100%;
+}
+
 .nav {
   background-color: #f1a66a;
   position: relative;
@@ -93,6 +98,10 @@ html, body {
   top: 50%;
   -o-object-fit: contain;
      object-fit: contain;
+  transition: all 0.15s ease-in;
+}
+.nav__div__logo:hover {
+  transform: scale(1.2);
 }
 .nav__div__button {
   display: flex;
@@ -229,7 +238,7 @@ div.button__filter {
 .footer-dark {
   padding: 50px 0;
   color: #f0f9ff;
-  background-color: #282d32;
+  background-color: #151515;
 }
 
 .footer-dark h3 {
