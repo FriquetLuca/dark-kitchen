@@ -9,7 +9,7 @@ html, body {
 #dinner {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: stretch;
   align-content: flex-start;
   gap: 35px 10px;
@@ -65,7 +65,15 @@ html, body {
   color: #cfcef6;
 }
 .dinner__item__command__shop {
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #f1a66a;
+  border-radius: 5px;
+  border-color: rgb(234, 248, 108);
+}
+.dinner__item__command__shop__icon {
+  width: 16px;
+  height: 16px;
 }
 
 * {
@@ -75,6 +83,7 @@ html, body {
 header {
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 .nav {
@@ -120,10 +129,6 @@ header {
      object-fit: contain;
   height: 100%;
   width: 100%;
-}
-
-.button__filter {
-  margin-top: 100px;
 }
 
 /* The switch - the box around the slider */
@@ -189,6 +194,10 @@ div.button__filter {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+p.button__title {
+  font-family: Roboto, sans-serif;
 }
 
 .title {

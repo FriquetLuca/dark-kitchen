@@ -1,8 +1,5 @@
 // BUTTON STYLE ---------------------------------
 
-.button__filter {
-  margin-top: 100px;
-}
 
 /* The switch - the box around the slider */
 .switch {
@@ -71,6 +68,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  p.button__title {
+    font-family: $roboto-font
+
   }
 
   // END BUTTON STYLE ---------------------------
