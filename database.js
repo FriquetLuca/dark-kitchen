@@ -1,3 +1,5 @@
+
+// DATABASE -------------------------------------------------
 const collection = [
     {
         name: "Pizza Ananas", 
@@ -70,15 +72,10 @@ const collection = [
     },
 ] 
 
-// let oeufs = document.getElementsByClassName('button_oeuf');
-// for(let oeuf of oeufs)
-// {
-//   if(oeuf.clicked)
-//   {
-//     alert("Oeuf");
-//   }
-// }
+// END DATABASE ------------------------------------------
 
+
+// FILTER------------------------------------------------------
 const oeufs = document.querySelectorAll('.button__oeuf');
 for(let oeuf of oeufs) {
     oeuf.addEventListener("click", (event) => {
@@ -169,15 +166,10 @@ for(let maki of makis) {
     
 }
 
+//END  FILTER -----------------------------------
 
 
-
-
-// if(document.getElementsByClassName('button.oeuf').clicked == true) {
-//     alert("Oeuf");
-// }
-
-//oeuf, frite, pate, pizza, sale, rapide
+// CARD ------------------------------------------------------
 
 /**
  * Inject the HTML that will handle the list of meals people could buy based on a database.
@@ -280,6 +272,6 @@ for(let maki of makis) {
 
  initializeDinner(collection);
 
-
+// END CARD--------------------------------------------------------
 
 
