@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 html, body {
   margin: 0;
   padding: 0;
@@ -69,7 +70,6 @@ html, body {
 
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 header {
@@ -120,4 +120,48 @@ header {
      object-fit: contain;
   height: 100%;
   width: 100%;
+}
+
+.title {
+  background-image: url("assets/img/title_background.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.title__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title__text__main {
+  font-family: Roboto, sans-serif;
+  margin-top: 140px;
+  font-size: 3.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .title__text__main {
+    font-size: 4.5rem;
+  }
+}
+.title__text__subtitle {
+  font-family: Hind, sans-serif;
+  font-size: 2rem;
+}
+@media screen and (min-width: 1000px) {
+  .title__text__subtitle {
+    font-size: 2.5rem;
+  }
+}
+.title__text__description {
+  font-family: Hind, sans-serif;
+  font-size: 1.2rem;
+  margin: 30px;
+  line-height: 1.2;
+}
+@media screen and (min-width: 1000px) {
+  .title__text__description {
+    margin: 80px;
+    line-height: 1.3;
+  }
 }
