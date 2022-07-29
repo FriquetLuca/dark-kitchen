@@ -12,8 +12,7 @@ $bgColor-dark: #151515;
 @if $light-theme {
     $textColor-light: darken($textColor-light, 60%);
     $textColor-dark: darken($textColor-dark, 60%);
-
-    $bgColor-light: lighten($bgColor-light, 10%); //
+    $bgColor-light: lighten($bgColor-light, 10%);
     $bgColor-middlelight: lighten($bgColor-middlelight, 20%);
     $bgColor-middle: lighten($bgColor-middle, 30%);
     $bgColor-dark: lighten($textColor-dark, 40%);
