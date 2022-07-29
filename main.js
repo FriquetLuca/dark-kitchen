@@ -15,70 +15,70 @@ const collection = [
         picture: "assets/img/pananas.jpg", 
         ingredients: ["farine", "levure de boulanger", "sel", "huile d'olive", "crème de sésame noir", "tomates fraîches", "oignon rouge", "poivron rouge, mozzarella" , "chiffonnade de jambon ou blanc de poulet", "coriandre", "ananas"],
         price: 2,
-        categories: ["pizza"]
+        categories: ["pizza", "fruit"],
     },
     {
         name: "Pizza Chorizo", 
         picture: "assets/img/pchorizo.jpg", 
         ingredients: ["pâte", "sauce tomate", "fromages râpés","chorizo","poivron","ognion", "olives noires" , "huile d'olive"], 
         price: 5,
-        categories: ["pizza"]
+        categories: ["pizza"],
     },  
     {
-        name: "Pâtes Carbonara", 
-        picture: "assets/img/pacarbo.jpg", 
-        ingredients: ["Poivre", "Sel", "Parmigiano Reggiano Galbani" ,"Pancetta", "jaunes d'oeufs", "Spaghetti"],
+        name: "Brochette Boeuf", 
+        picture: "assets/img/broboeuf.jpeg", 
+        ingredients: ["Poivre", "Sel", "Boeuf", "Sauce"],
         price: 4,
-        categories: ["pâtes"],
+        categories: ["brochette"],
     },
     {
-        name: "Pâtes Bolognaise", 
-        picture: "assets/img/pabolo.jpg", 
-        ingredients: ["spaghettis", "boeuf haché","carotte", "champignons" , "tomates pelées", "oignons", "gousses d’ail" , "huile", "thym", "laurier" ,"sel" , "poivre"],
+        name: "Brochette Vegan", 
+        picture: "assets/img/brovegan.jpg", 
+        ingredients: ["sel" , "poivre", "Mangue", "Avocat"],
         price: 7,
-        categories: ["pâtes"],
+        categories: ["brochette", "végetarien", "vegan", "fruit"],
     },
     {
-        name: "Steak Frite", 
-        picture: "assets/img/fristeak.jpg", 
-        ingredients: ["boeuf", "Pommes de terre", "Beurre", "Huile", "Sel", "Poivre"],
+        name: "Brochette Agneau", 
+        picture: "assets/img/broagneau.jpg", 
+        ingredients: ["sel" , "poivre", "Sauce", "Agneau"],
         price: 7,
-        categories: ["frite"]
+        categories: ["brochette"]
     }, 
     {
-        name: "Moule Frite", 
-        picture: "assets/img/frimoule.jpg", 
-        ingredients: ["moules","échalotes", "persil", "ail", "beurre", "vin blanc", "sel", "poivre", "pommes de terre", "Huile"],
+        name: "Brochette Canard", 
+        picture: "assets/img/brocanard.jpeg", 
+        ingredients: ["Sel", "Poivre", "Assaisonnement", "Canard"],
         price: 9,
-        categories: ["frite"]
+        categories: ["brochette"]
     }, 
     {
-        name: "Maki Thon", 
-        picture: "assets/img/mathon.jpg", 
-        ingredients: ["Riz", "Eau", "Vinaigre", "Sel", "Sucre", "nori", "Soja", "Concombre", "thon"],
+        name: "Brochette Poulet", 
+        picture: "assets/img/bropoulet.jpg", 
+        ingredients: ["Poulet", "Sauce", "Tomates", "Sel"],
         price: 9,
-        categories: ["maki"],
+        categories: ["brochette"],
     },
     {
-        name: "Maki Saumon", 
-        picture: "assets/img/masaumon.jpg", 
-        ingredients: [ "riz", "vinaigre", "sucre", "sel", "nori", "saumon", "avocat", "citron", "soja", "wasabi"],
+        name: "Pizza Legume", 
+        picture: "assets/img/pizzalegume.jpg", 
+        ingredients: [ "Pâte", "Poivrons", "Tomates", "Maïs", "Oignons Rouges"],
         price: 5,
-        categories: ["maki"],
+        categories: ["pizza", "vegan", "végétarien"],
     },   
     {
-        name: "Oeuf au plat", 
-        picture: "assets/img/oeufplat.jpg", 
-        ingredients: [ "oeuf", "beurre", "sel", "poivre"],
+        name: "Pizza Saumon", 
+        picture: "assets/img/pizzasaumon.jpg", 
+        ingredients: [ "Saumon", "sel", "poivre", "Garniture"],
         price: 4,
-        categories: ["oeuf"]
+        categories: ["pizza","végétarien"]
     },
     {
-        name: "Oeuf a la coque", 
-        picture: "assets/img/oeufcoque.jpg", 
-        ingredients: [ "oeuf", "beurre", "sel", "poivre", "persil"],
+        name: "Pizza Vegan", 
+        picture: "assets/img/pizzavegan.jpg", 
+        ingredients: [ "Tomates", "Salades", "Olives", "Poivrons","Piment"],
         price: 6,
-        categories: ["oeuf"]
+        categories: ["pizza", "vegan", "végétarien"]
     },
 ];
 
@@ -256,6 +256,8 @@ function initializeDinner(dinnerDatabase)
         let price = createItem('p', 'dinner__item__command__price');
         price.innerText = `${item.price} €`;
         let shop = createItem('button', 'dinner__item__command__shop');
+        shop.setAttribute('name', item.name);
+        shop.setAttribute('price', `${item.price}`);
         let shopImg = createItem('img', 'dinner__item__command__shop__icon');
         shopImg.setAttribute('src', 'assets/img/shopping-cart.png');
         shopImg.setAttribute('alt', 'shopping cart');
@@ -284,3 +286,72 @@ function initializeDinner(dinnerDatabase)
 }
 
 initializeDinner(collection);
+
+const shopped = {};
+const recreateShopElementList = () => {
+    let itemContainer = document.querySelector('.shoppingcart__item');
+    for(let menuName in shopped)
+    {
+        let caddy = shopped[menuName];
+        let shopItem = document.createElement('div');
+            shopItem.classList.add('shoppingcart__item__item');
+
+                let shopQty = document.createElement('p');
+                shopQty.classList.add('shoppingcart__item__item__quantity');
+                shopQty.innerHTML = caddy.quantity;
+                shopItem.appendChild(shopQty);
+
+                let shopN = document.createElement('p');
+                shopN.classList.add('shoppingcart__item__item__name');
+                shopN.innerHTML = caddy.name;
+                shopItem.appendChild(shopN);
+
+                let shopPr = document.createElement('p');
+                shopPr.classList.add('shoppingcart__item__item__price');
+                shopPr.innerHTML = caddy.price;
+                shopItem.appendChild(shopPr);
+        itemContainer.appendChild(shopItem);
+    }
+}
+const computeShopPrice = () => {
+    let total = 0;
+    for(const menu in shopped)
+    {
+        total += shopped[menu].price * shopped[menu].quantity;
+    }
+    let shopTotalP = document.querySelector('.shoppingcart__footer__content__total');
+    shopTotalP.innerHTML = `Total: ${total}€`;
+};
+
+// Shopping list
+let clickableCaddy = document.querySelectorAll('.dinner__item__command__shop');
+for (const caddy of clickableCaddy) {
+    caddy.addEventListener ("click", function(e) {
+        let cPath = e.composedPath();
+        let shopBtn;
+        if(cPath[0].classList[0] === 'dinner__item__command__shop')
+        {
+            shopBtn = e.composedPath()[0];
+        }
+        else
+        {
+            shopBtn = e.composedPath()[1];
+        }
+        let shopMenuName = shopBtn.name;
+        let shopPrice = shopBtn.getAttribute('price');
+        if(shopped[shopMenuName] !== undefined)
+        {
+            shopped[shopMenuName].quantity += 1;
+        }
+        else
+        {
+            shopped[shopMenuName] = {
+                name: shopMenuName,
+                price: shopPrice,
+                quantity: 1
+            };
+        }
+        computeShopPrice();
+        recreateShopElementList();
+    });
+}
