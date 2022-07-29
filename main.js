@@ -388,7 +388,7 @@ for (const caddy of clickableCaddy) {
         let shopPrice = shopBtn.getAttribute('price');
         if(shopped[shopMenuName] !== undefined)
         {
-            shopped[shopMenuName].quantity += 1;
+            shopped[shopMenuName].quantity++;
         }
         else
         {

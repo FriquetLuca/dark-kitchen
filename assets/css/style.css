@@ -6,76 +6,6 @@ html, body {
   color: #f4f4f4;
 }
 
-#dinner {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: stretch;
-  align-content: flex-start;
-  gap: 35px 10px;
-  width: 100%;
-}
-
-.dinner__item {
-  max-width: 350px;
-  position: relative;
-  border-top-right-radius: 25px;
-  border-bottom-left-radius: 25px;
-  background-color: #be793f;
-}
-.dinner__item__picture {
-  border-top-right-radius: 25px;
-  width: 100%;
-  min-width: max(280px, 100%);
-}
-.dinner__item__content {
-  width: 100%;
-  min-width: max(280px, 100%);
-}
-.dinner__item__content__name {
-  margin-top: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: large;
-  color: #cfcef6;
-}
-.dinner__item__content__ingredients {
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: medium;
-  color: #f4f4f4;
-}
-.dinner__item__command {
-  position: absolute;
-  width: 100px;
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
-  right: 0;
-  bottom: 0;
-  margin-right: 10px;
-  margin-bottom: -30px;
-  border-radius: 10px;
-  background-color: #b9314f;
-}
-.dinner__item__command__price {
-  margin-top: 10px;
-  color: #cfcef6;
-}
-.dinner__item__command__shop {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  background-color: #f1a66a;
-  border-radius: 5px;
-  border-color: rgb(234, 248, 108);
-}
-.dinner__item__command__shop__icon {
-  width: 16px;
-  height: 16px;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -134,6 +64,51 @@ header {
 }
 .nav__div__button .nav__button:hover {
   background: radial-gradient(circle, #f1a66a 0%, rgb(218, 118, 33) 58%, #b9314f 100%);
+}
+
+.title {
+  background-image: url("assets/img/title_background.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.title__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.title__text__main {
+  font-family: Roboto, sans-serif;
+  margin-top: 140px;
+  font-size: 3.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .title__text__main {
+    font-size: 4.5rem;
+  }
+}
+.title__text__subtitle {
+  font-family: Hind, sans-serif;
+  font-size: 2rem;
+}
+@media screen and (min-width: 1000px) {
+  .title__text__subtitle {
+    font-size: 2.5rem;
+  }
+}
+.title__text__description {
+  font-family: Hind, sans-serif;
+  font-size: 1.2rem;
+  margin: 30px;
+  line-height: 1.2;
+}
+@media screen and (min-width: 1000px) {
+  .title__text__description {
+    margin: 80px;
+    line-height: 1.3;
+  }
 }
 
 .button1 {
@@ -213,49 +188,74 @@ div.button__filter {
   font-family: Roboto, sans-serif;
 }
 
-.title {
-  background-image: url("assets/img/title_background.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.title__text {
+#dinner {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
-  color: white;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 35px 10px;
+  width: 100%;
 }
-.title__text__main {
-  font-family: Roboto, sans-serif;
-  margin-top: 140px;
-  font-size: 3.5rem;
+
+.dinner__item {
+  max-width: 350px;
+  position: relative;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: #be793f;
 }
-@media screen and (min-width: 1000px) {
-  .title__text__main {
-    font-size: 4.5rem;
-  }
+.dinner__item__picture {
+  border-top-right-radius: 25px;
+  width: 100%;
+  min-width: max(280px, 100%);
 }
-.title__text__subtitle {
-  font-family: Hind, sans-serif;
-  font-size: 2rem;
+.dinner__item__content {
+  width: 100%;
+  min-width: max(280px, 100%);
 }
-@media screen and (min-width: 1000px) {
-  .title__text__subtitle {
-    font-size: 2.5rem;
-  }
+.dinner__item__content__name {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: large;
+  color: #cfcef6;
 }
-.title__text__description {
-  font-family: Hind, sans-serif;
-  font-size: 1.2rem;
-  margin: 30px;
-  line-height: 1.2;
+.dinner__item__content__ingredients {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: medium;
+  color: #f4f4f4;
 }
-@media screen and (min-width: 1000px) {
-  .title__text__description {
-    margin: 80px;
-    line-height: 1.3;
-  }
+.dinner__item__command {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  right: 0;
+  bottom: 0;
+  margin-right: 10px;
+  margin-bottom: -30px;
+  border-radius: 10px;
+  background-color: #b9314f;
+}
+.dinner__item__command__price {
+  margin-top: 10px;
+  color: #cfcef6;
+}
+.dinner__item__command__shop {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #f1a66a;
+  border-radius: 5px;
+  border-color: rgb(234, 248, 108);
+}
+.dinner__item__command__shop__icon {
+  width: 16px;
+  height: 16px;
 }
 
 .footer-dark {

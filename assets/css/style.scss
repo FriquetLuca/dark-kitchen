@@ -31,10 +31,10 @@ html, body {
     color: $textColor-light;
 }
 // ALL CSS IMPORTS HERE
-@import "dinner";
 @import "nav";
-@import "buttonstyle";
 @import "title";
+@import "buttonstyle";
+@import "dinner";
 @import "footer";
 @import "shoppingcart";
 @import "shoppingitems";
