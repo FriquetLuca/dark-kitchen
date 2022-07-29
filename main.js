@@ -402,7 +402,7 @@ for (const caddy of clickableCaddy) {
     });
 }
 
-const clickOnShoppingCart =(e) =>{
+const clickOnShoppingCart =() =>{
     let shoppingCart = document.getElementsByClassName('container')
     if(shoppingCart[0].style.display == "none"){
         shoppingCart[0].style.display = "inline"
@@ -412,3 +412,4 @@ const clickOnShoppingCart =(e) =>{
 }
 const displayShoppingCart = document.querySelector('nav').lastElementChild.firstElementChild
 displayShoppingCart.addEventListener('click', clickOnShoppingCart)
+clickOnShoppingCart(); // Initialize the shopping card......
