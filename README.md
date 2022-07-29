@@ -32,7 +32,7 @@ A partir de là, les tâches ont été réparties en 4 groupes principaux à sav
 4. Implémenter le light/dark mode;
 5. Les comportements de certaines balises en **CSS**.
 
-Vous pouvez retrouver notre projet abouti à l'adresse ci-dessous:
+Vous pouvez retrouver notre projet abouti à l'adresse ci-dessous:<br/>
 [Takeawish](https://raw.githack.com/FriquetLuca/dark-kitchen/master/index.html)
 
 
