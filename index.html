@@ -6,15 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Dark Kitchen</title>
         <link rel="icon" href="assets/img/logo.jpg">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link id="theme" rel="stylesheet" href="assets/css/style-light-theme.css">
         <script defer src="main.js"></script>
     </head>
     <body>
         <header>
             <nav class="nav">
                 <div class="nav__div__button">
-                    <button class="nav__button">
-                        <img class="nav__button__icon" src="assets/img/sun.png" alt="Dark mode button">
+                    <button class="nav__button" onclick="toggleTheme()">
+                        <img id="dark__theme" class="nav__button__icon" src="assets/img/sun.png" alt="Dark mode button">
                     </button>
                 </div>
                 <div class="nav__div">

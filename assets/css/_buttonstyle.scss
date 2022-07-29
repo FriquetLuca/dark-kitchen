@@ -67,8 +67,7 @@
   div.button__filter {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    border: 1px solid blue;
+    justify-content: space-around;
     background-color: $bgColor-middle;
   }
 

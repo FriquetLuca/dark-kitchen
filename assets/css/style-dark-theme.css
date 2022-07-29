@@ -2,8 +2,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #7b78e6;
-  color: #5b5b5b;
+  background-color: #151515;
+  color: #f4f4f4;
 }
 
 #dinner {
@@ -21,7 +21,7 @@ html, body {
   position: relative;
   border-top-right-radius: 25px;
   border-bottom-left-radius: 25px;
-  background-color: #d8ae8b;
+  background-color: #be793f;
 }
 .dinner__item__picture {
   border-top-right-radius: 25px;
@@ -37,13 +37,13 @@ html, body {
   margin-left: 10px;
   margin-right: 10px;
   font-size: large;
-  color: #19177b;
+  color: #cfcef6;
 }
 .dinner__item__content__ingredients {
   margin-left: 10px;
   margin-right: 10px;
   font-size: medium;
-  color: #5b5b5b;
+  color: #f4f4f4;
 }
 .dinner__item__command {
   position: absolute;
@@ -58,16 +58,16 @@ html, body {
   margin-right: 10px;
   margin-bottom: -30px;
   border-radius: 10px;
-  background-color: #e59eae;
+  background-color: #b9314f;
 }
 .dinner__item__command__price {
   margin-top: 10px;
-  color: #19177b;
+  color: #cfcef6;
 }
 .dinner__item__command__shop {
   margin-top: 5px;
   margin-bottom: 5px;
-  background-color: #f5c299;
+  background-color: #f1a66a;
   border-radius: 5px;
   border-color: rgb(234, 248, 108);
 }
@@ -87,8 +87,8 @@ header {
 }
 
 .nav {
-  background-color: #f5c299;
-  background: radial-gradient(circle, #f5c299 0%, rgb(218, 118, 33) 58%, #e59eae 100%);
+  background-color: #f1a66a;
+  background: radial-gradient(circle, #f1a66a 0%, rgb(218, 118, 33) 58%, #b9314f 100%);
   position: relative;
   display: flex;
   height: 50px;
@@ -133,7 +133,7 @@ header {
   width: 100%;
 }
 .nav__div__button .nav__button:hover {
-  background: radial-gradient(circle, #f5c299 0%, rgb(218, 118, 33) 58%, #e59eae 100%);
+  background: radial-gradient(circle, #f1a66a 0%, rgb(218, 118, 33) 58%, #b9314f 100%);
 }
 
 /* The switch - the box around the slider */
@@ -175,11 +175,11 @@ header {
 }
 
 input:checked + .slider {
-  background-color: #f5c299;
+  background-color: #f1a66a;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #e59eae;
+  box-shadow: 0 0 1px #b9314f;
 }
 
 input:checked + .slider:before {
@@ -199,7 +199,7 @@ div.button__filter {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #e59eae;
+  background-color: #b9314f;
 }
 
 p.button__title {
@@ -213,7 +213,7 @@ p.button__title {
   margin: 0px 0px 10px 10px;
 }
 .button1:hover {
-  background-color: #f5c299;
+  background-color: #f1a66a;
   border-radius: 10%;
 }
 
@@ -265,7 +265,7 @@ p.button__title {
   margin-top: 20px;
   padding: 40px 0;
   color: #f0f9ff;
-  background-color: #7b78e6;
+  background-color: #151515;
 }
 
 .footer-dark h3 {

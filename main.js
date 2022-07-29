@@ -120,24 +120,6 @@ function createCategoryHTML()
 createCategoryHTML();
 // END DATABASE ------------------------------------------
 
-const getCategoryItems = (catt) => {
-    const getClasses = (cat) => {
-        let result = '';
-        for(let i = 0; i < cat.length; i++)
-        {
-            if(i != cat.length - 1)
-            {
-                result = `${result}.${cat[i]}, `;
-            }
-            else
-            {
-                result = `${result}.${cat[i]}`;
-            }
-        }
-        return result;
-    };
-    return document.querySelectorAll(getClasses(catt));
-}
 // FILTER------------------------------------------------------
 // Hover element
 const filterButtons = document.querySelectorAll('.button__filter > .button1');
@@ -147,8 +129,7 @@ for(let filterBtn of filterButtons)
         const menus = document.querySelectorAll('.dinner__item');
         for(let menu of menus)
         {
-            menu.style.visibility = 'visible';
-            menu.style.overflow = 'visible';
+            menu.style.display = 'block';
         }
         for(let fBtn of filterButtons)
         {
@@ -170,8 +151,7 @@ for(let filterBtn of filterButtons)
                 {
                     if(!nodeIncluded(menu.classList, pName.innerHTML)) // Not included
                     {
-                        menu.style.visibility = 'collapse';
-                        menu.style.overflow = 'hidden';
+                        menu.style.display = 'none';
                     }
                 }
             }
@@ -179,7 +159,25 @@ for(let filterBtn of filterButtons)
     });
 }
 
-//END  FILTER -----------------------------------
+// THEME
+function toggleTheme()
+{
+    let theme = document.getElementsByTagName('link')[1];
+    let currentBtn = document.getElementById('dark__theme');
+    if (theme.getAttribute('href') == './assets/css/style-light-theme.css')
+    {
+        theme.setAttribute('href', './assets/css/style-dark-theme.css');
+        currentBtn.setAttribute('src', 'assets/img/moon.png');
+
+    }
+    else
+    {
+        theme.setAttribute('href', './assets/css/style-light-theme.css');
+        currentBtn.setAttribute('src', 'assets/img/sun.png');
+    }
+    console.log(element);
+}
+
 
 /**
  * Inject the HTML that will handle the list of meals people could buy based on a database.

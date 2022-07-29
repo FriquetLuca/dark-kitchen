@@ -1,3 +1,5 @@
+// Dark Theme
+$light-theme: true !default;
 // Text Color
 $textColor-light: #f4f4f4;
 $textColor-dark: #cfcef6;
@@ -6,6 +8,17 @@ $bgColor-light: #f1a66a;
 $bgColor-middlelight: #be793f;
 $bgColor-middle: #b9314f;
 $bgColor-dark: #151515;
+
+@if $light-theme {
+    $textColor-light: darken($textColor-light, 60%);
+    $textColor-dark: darken($textColor-dark, 60%);
+
+    $bgColor-light: lighten($bgColor-light, 10%); //
+    $bgColor-middlelight: lighten($bgColor-middlelight, 20%);
+    $bgColor-middle: lighten($bgColor-middle, 30%);
+    $bgColor-dark: lighten($textColor-dark, 40%);
+}
+
 // Font style
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 $roboto-font: Roboto, sans-serif;
