@@ -224,6 +224,7 @@ div.button__filter {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 .title__text__main {
   font-family: Roboto, sans-serif;
@@ -355,14 +356,16 @@ div.button__filter {
 }
 
 .shoppingcart {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  color: #5b5b5b;
   background-color: #ffffff;
+  font-family: Hind, sans-serif;
   width: 300px;
   height: 400px;
+  margin-top: 20px;
 }
 .shoppingcart__footer {
   display: flex;
@@ -382,7 +385,6 @@ div.button__filter {
   height: 25px;
 }
 .shoppingcart__footer__content__total {
-  font-family: Hind, sans-serif;
   margin: 0px 10px;
 }
 .shoppingcart__footer__checkout {
