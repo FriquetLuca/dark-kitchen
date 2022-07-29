@@ -175,7 +175,6 @@ function toggleTheme()
         theme.setAttribute('href', './assets/css/style-light-theme.css');
         currentBtn.setAttribute('src', 'assets/img/sun.png');
     }
-    console.log(element);
 }
 
 
@@ -256,6 +255,8 @@ function initializeDinner(dinnerDatabase)
         let price = createItem('p', 'dinner__item__command__price');
         price.innerText = `${item.price} €`;
         let shop = createItem('button', 'dinner__item__command__shop');
+        shop.setAttribute('name', item.name);
+        shop.setAttribute('price', `${item.price}`);
         let shopImg = createItem('img', 'dinner__item__command__shop__icon');
         shopImg.setAttribute('src', 'assets/img/shopping-cart.png');
         shopImg.setAttribute('alt', 'shopping cart');

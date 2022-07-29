@@ -148,16 +148,13 @@ let clickableCaddy = document.querySelectorAll('.dinner__item__command__shop');
 
 for (const caddy of clickableCaddy) {
     caddy.addEventListener ("click", function(e) {
-        takeDinner()
+        let shopBtn = e.path[2].querySelector('.dinner__item__command__shop');
+        let shopMenuName = shopBtn.name;
+        let shopPrice = shopBtn.getAttribute("price");
 
-    })
+        let cart = [];
+        cart.push(shopMenuName,shopPrice);
+    });
 }
 
-function takeDinner() {
-    let dinner = document.querySelector('.dinner__item');
-    console.log(dinner);
 
-    
-
-
-}
