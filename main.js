@@ -296,9 +296,11 @@ const recreateShopElementList = () => {
     }
     for(let menuName in shopped)
     {
+        let writing = true;
         let caddy = shopped[menuName];
         let shopItem = document.createElement('div');
             shopItem.classList.add('shoppingcart__item__item');
+            shopItem.setAttribute('qty', '1');
 
             let shopN = document.createElement('p');
             shopN.classList.add('shoppingcart__item__item__name');
@@ -307,14 +309,35 @@ const recreateShopElementList = () => {
             
             let shopQty = document.createElement('p');
             shopQty.classList.add('shoppingcart__item__item__quantity');
-            shopQty.innerHTML = `Quantité: ${caddy.quantity}`;
+            shopQty.innerHTML = `<span>Quantité</span> : ${caddy.quantity}`;
             shopItem.appendChild(shopQty);
 
             let shopPr = document.createElement('p');
             shopPr.classList.add('shoppingcart__item__item__price');
-            shopPr.innerHTML = `Prix: ${caddy.price * caddy.quantity} €`;
+            shopPr.innerHTML = `<span>Prix</span> : ${caddy.price * caddy.quantity} €`;
             shopItem.appendChild(shopPr);
-        itemContainer.appendChild(shopItem);
+
+            let cBox = document.createElement('button');
+            shopPr.classList.add('shoppingcart__item__item__remove');
+            cBox.innerHTML = "-";
+            cBox.addEventListener ("click", function(e) {
+                caddy.quantity--;
+                if(caddy.quantity <= 0)
+                {
+                    writing = false;
+                    delete shopped[menuName];
+                    recreateShopElementList();
+                }
+                else
+                {
+                    shopQty.innerHTML = `<span>Quantité</span> : ${caddy.quantity}`;
+                }
+            });
+            shopItem.appendChild(cBox);
+        if(writing)
+        {
+            itemContainer.appendChild(shopItem);
+        }
     }
 }
 const computeShopPrice = () => {

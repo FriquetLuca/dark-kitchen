@@ -409,6 +409,21 @@ div.button__filter {
 
 .shoppingcart__item__item {
   display: flex;
-  flex-flow: row nowrap;
-  gap: 2px 3px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0px 3px;
+}
+.shoppingcart__item__item p {
+  margin: 0;
+}
+.shoppingcart__item__item__name {
+  width: 100%;
+  font-weight: bold;
+}
+.shoppingcart__item__item__quantity span {
+  font-style: italic;
+}
+.shoppingcart__item__item__price span {
+  font-style: italic;
 }

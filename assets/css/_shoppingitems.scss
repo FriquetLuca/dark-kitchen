@@ -1,5 +1,23 @@
-.shoppingcart__item__item {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 2px 3px;
+.shoppingcart__item
+{
+    &__item {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 0px 3px;
+        p {
+            margin: 0;
+        }
+        &__name {
+            width: 100%;
+            font-weight: bold;
+        }
+        &__quantity span {
+            font-style: italic;
+        }
+        &__price span {
+            font-style: italic;
+        }
+    }
 }
