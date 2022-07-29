@@ -350,12 +350,11 @@ div.button__filter {
 }
 
 .container {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 10px;
 }
 
 .shoppingcart {
-  margin-right: 20px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -370,6 +369,11 @@ div.button__filter {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+.shoppingcart__footer__divider {
+  width: 280px;
+  margin: 10px 0px;
+  border-bottom: 1px solid gray;
 }
 .shoppingcart__footer__content {
   display: flex;
@@ -393,4 +397,7 @@ div.button__filter {
   border-radius: 0.25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   cursor: pointer;
+}
+.shoppingcart__footer__checkout :hover {
+  background-color: #d8ae8b;
 }
