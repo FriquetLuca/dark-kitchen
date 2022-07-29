@@ -256,6 +256,8 @@ function initializeDinner(dinnerDatabase)
         let price = createItem('p', 'dinner__item__command__price');
         price.innerText = `${item.price} €`;
         let shop = createItem('button', 'dinner__item__command__shop');
+        shop.setAttribute('name', item.name);
+        shop.setAttribute('price', `${item.price}`);
         let shopImg = createItem('img', 'dinner__item__command__shop__icon');
         shopImg.setAttribute('src', 'assets/img/shopping-cart.png');
         shopImg.setAttribute('alt', 'shopping cart');
@@ -284,3 +286,72 @@ function initializeDinner(dinnerDatabase)
 }
 
 initializeDinner(collection);
+
+const shopped = {};
+const recreateShopElementList = () => {
+    let itemContainer = document.querySelector('.shoppingcart__item');
+    for(let menuName in shopped)
+    {
+        let caddy = shopped[menuName];
+        let shopItem = document.createElement('div');
+            shopItem.classList.add('shoppingcart__item__item');
+
+                let shopQty = document.createElement('p');
+                shopQty.classList.add('shoppingcart__item__item__quantity');
+                shopQty.innerHTML = caddy.quantity;
+                shopItem.appendChild(shopQty);
+
+                let shopN = document.createElement('p');
+                shopN.classList.add('shoppingcart__item__item__name');
+                shopN.innerHTML = caddy.name;
+                shopItem.appendChild(shopN);
+
+                let shopPr = document.createElement('p');
+                shopPr.classList.add('shoppingcart__item__item__price');
+                shopPr.innerHTML = caddy.price;
+                shopItem.appendChild(shopPr);
+        itemContainer.appendChild(shopItem);
+    }
+}
+const computeShopPrice = () => {
+    let total = 0;
+    for(const menu in shopped)
+    {
+        total += shopped[menu].price * shopped[menu].quantity;
+    }
+    let shopTotalP = document.querySelector('.shoppingcart__footer__content__total');
+    shopTotalP.innerHTML = `Total: ${total}€`;
+};
+
+// Shopping list
+let clickableCaddy = document.querySelectorAll('.dinner__item__command__shop');
+for (const caddy of clickableCaddy) {
+    caddy.addEventListener ("click", function(e) {
+        let cPath = e.composedPath();
+        let shopBtn;
+        if(cPath[0].classList[0] === 'dinner__item__command__shop')
+        {
+            shopBtn = e.composedPath()[0];
+        }
+        else
+        {
+            shopBtn = e.composedPath()[1];
+        }
+        let shopMenuName = shopBtn.name;
+        let shopPrice = shopBtn.getAttribute('price');
+        if(shopped[shopMenuName] !== undefined)
+        {
+            shopped[shopMenuName].quantity += 1;
+        }
+        else
+        {
+            shopped[shopMenuName] = {
+                name: shopMenuName,
+                price: shopPrice,
+                quantity: 1
+            };
+        }
+        computeShopPrice();
+        recreateShopElementList();
+    });
+}
