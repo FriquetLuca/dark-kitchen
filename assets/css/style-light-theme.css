@@ -378,10 +378,12 @@ div.button__filter {
   width: 0;
   height: 0;
   bottom: 100%;
-  right: 1.5em;
-  border: 0.75rem solid transparent;
-  border-top: none;
-  border-bottom-color: #151515;
+  right: 2em;
+  border-right: 10px solid transparent;
+  border-left: 7px solid #151515;
+  border-top: 12px solid #151515;
+  border-bottom: 10px solid transparent;
+  transform: rotate(-180deg);
 }
 .shoppingcart__footer {
   display: flex;

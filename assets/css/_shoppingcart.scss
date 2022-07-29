@@ -25,12 +25,12 @@
         width: 0;
         height: 0;
         bottom: 100%;
-        right: 1.5em; // offset should move with padding of parent
-        border: .75rem solid transparent;
-        border-top: none;
-    
-        // looks
-        border-bottom-color: $bgColor-dark;
+        right: 2.0em; // offset should move with padding of parent
+        border-right: 10px solid transparent;
+        border-left: 7px solid $bgColor-dark;
+        border-top: 12px solid $bgColor-dark;
+        border-bottom: 10px solid transparent;
+        transform: rotate(-180deg);
     }
     &__footer {
         display: flex;
