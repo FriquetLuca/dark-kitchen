@@ -1,0 +1,29 @@
+// Text Color
+$textColor-light: #151515;
+$textColor-dark: #292929;
+// Background Color
+$bgColor-light: #f1a66a;
+$bgColor-middlelight: #be793f;
+$bgColor-middle: #b9314f;
+$bgColor-dark: #f4f4f4;
+
+// Font style
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+$roboto-font: Roboto, sans-serif;
+$hind-font: Hind, sans-serif;
+
+// Default Style
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: $bgColor-dark;
+    color: $textColor-light;
+}
+// ALL CSS IMPORTS HERE
+@import "nav";
+@import "title";
+@import "buttonstyle";
+@import "dinner";
+@import "footer";
+@import "shoppingcart";
+@import "shoppingitems";

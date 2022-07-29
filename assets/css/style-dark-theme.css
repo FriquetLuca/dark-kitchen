@@ -2,8 +2,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #151515;
-  color: #f4f4f4;
+  background-color: #f4f4f4;
+  color: #151515;
 }
 
 * {
@@ -145,7 +145,7 @@ header {
   left: 0;
   height: 15px;
   width: 15px;
-  background-color: #151515;
+  background-color: #f4f4f4;
   border-radius: 15px;
 }
 
@@ -164,7 +164,7 @@ header {
   top: 0px;
   width: 5px;
   height: 10px;
-  border: solid #cfcef6;
+  border: solid #292929;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
@@ -219,13 +219,13 @@ div.button__filter {
   margin-left: 10px;
   margin-right: 10px;
   font-size: large;
-  color: #cfcef6;
+  color: #292929;
 }
 .dinner__item__content__ingredients {
   margin-left: 10px;
   margin-right: 10px;
   font-size: medium;
-  color: #f4f4f4;
+  color: #151515;
 }
 .dinner__item__command {
   position: absolute;
@@ -244,7 +244,7 @@ div.button__filter {
 }
 .dinner__item__command__price {
   margin-top: 10px;
-  color: #cfcef6;
+  color: #292929;
 }
 .dinner__item__command__shop {
   margin-top: 5px;
@@ -261,8 +261,8 @@ div.button__filter {
 .footer-dark {
   margin-top: 20px;
   padding: 40px 0;
-  color: #f4f4f4;
-  background-color: #151515;
+  color: #151515;
+  background-color: #f4f4f4;
 }
 
 .footer-dark h3 {
@@ -292,7 +292,7 @@ div.button__filter {
 }
 
 .footer-dark .item.text p a {
-  color: #f4f4f4;
+  color: #151515;
 }
 
 @media (max-width: 767px) {
@@ -334,7 +334,7 @@ div.button__filter {
   display: inline-block;
   text-align: center;
   margin: 0 8px;
-  color: #f4f4f4;
+  color: #151515;
   opacity: 0.75;
 }
 
@@ -364,8 +364,8 @@ div.button__filter {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  color: #cfcef6;
-  background-color: #151515;
+  color: #292929;
+  background-color: #f4f4f4;
   font-family: Hind, sans-serif;
   width: 300px;
   height: 400px;
@@ -439,7 +439,7 @@ div.button__filter {
   padding-left: 30px;
 }
 .shoppingcart__item__item__quantity, .shoppingcart__item__item__price {
-  color: #f4f4f4;
+  color: #151515;
 }
 .shoppingcart__item__item__quantity span, .shoppingcart__item__item__price span {
   font-style: italic;
@@ -455,5 +455,5 @@ div.button__filter {
 }
 .shoppingcart__item__item__btns__add:hover, .shoppingcart__item__item__btns__remove:hover {
   border: solid 1px #919191;
-  background-color: #151515;
+  background-color: #f4f4f4;
 }
