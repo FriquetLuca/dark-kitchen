@@ -1,3 +1,21 @@
+// THEME
+function toggleTheme()
+{
+    let theme = document.getElementsByTagName('link')[1];
+    let currentBtn = document.getElementById('dark__theme');
+    if (theme.getAttribute('href') == './assets/css/style-light-theme.css')
+    {
+        theme.setAttribute('href', './assets/css/style-dark-theme.css');
+        currentBtn.setAttribute('src', 'assets/img/moon.png');
+
+    }
+    else
+    {
+        theme.setAttribute('href', './assets/css/style-light-theme.css');
+        currentBtn.setAttribute('src', 'assets/img/sun.png');
+    }
+}
+
 // Set every checkbox to false by default
 let inputs = document.getElementsByTagName('input');
 for (let i = 0; i < inputs.length; i++)
@@ -157,25 +175,6 @@ for(let filterBtn of filterButtons)
             }
         }
     });
-}
-
-// THEME
-function toggleTheme()
-{
-    let theme = document.getElementsByTagName('link')[1];
-    let currentBtn = document.getElementById('dark__theme');
-    if (theme.getAttribute('href') == './assets/css/style-light-theme.css')
-    {
-        theme.setAttribute('href', './assets/css/style-dark-theme.css');
-        currentBtn.setAttribute('src', 'assets/img/moon.png');
-
-    }
-    else
-    {
-        theme.setAttribute('href', './assets/css/style-light-theme.css');
-        currentBtn.setAttribute('src', 'assets/img/sun.png');
-    }
-    console.log(element);
 }
 
 
