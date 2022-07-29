@@ -331,6 +331,7 @@ const recreateShopElementList = () => {
                 else
                 {
                     shopQty.innerHTML = `<span>Quantité</span> : ${caddy.quantity}`;
+                    computeShopPrice();
                 }
             });
             shopItem.appendChild(cBox);
@@ -339,6 +340,7 @@ const recreateShopElementList = () => {
             itemContainer.appendChild(shopItem);
         }
     }
+    computeShopPrice();
 }
 const computeShopPrice = () => {
     let total = 0;
@@ -378,7 +380,6 @@ for (const caddy of clickableCaddy) {
                 quantity: 1
             };
         }
-        computeShopPrice();
         recreateShopElementList();
     });
 }
