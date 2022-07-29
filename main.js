@@ -78,7 +78,7 @@ const collection = [
         picture: "assets/img/pizzavegan.jpg", 
         ingredients: [ "Tomates", "Salades", "Olives", "Poivrons","Piment"],
         price: 6,
-        categories: ["pizza", "vegan", "sans viande"]
+        categories: ["pizza", "vegan", "végétarien"]
     },
 ];
 
