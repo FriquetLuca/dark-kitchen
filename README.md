@@ -33,7 +33,7 @@ A partir de là, les tâches ont été réparties en 4 groupes principaux à sav
 5. Les comportements de certaines balises en **CSS**.
 
 Vous pouvez retrouver notre projet abouti à l'adresse ci-dessous:<br/>
-[Takeawish](https://raw.githack.com/FriquetLuca/dark-kitchen/master/index.html){:target="_blank" rel="noopener"}
+[Takeawish](https://raw.githack.com/FriquetLuca/dark-kitchen/master/index.html)
 
 
 ### Travail réalisé par : 
