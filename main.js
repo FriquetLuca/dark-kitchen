@@ -290,26 +290,30 @@ initializeDinner(collection);
 const shopped = {};
 const recreateShopElementList = () => {
     let itemContainer = document.querySelector('.shoppingcart__item');
+    for(let i = itemContainer.childNodes.length - 1; i >= 0; i--)
+    {
+        itemContainer.removeChild(itemContainer.children[i]);
+    }
     for(let menuName in shopped)
     {
         let caddy = shopped[menuName];
         let shopItem = document.createElement('div');
             shopItem.classList.add('shoppingcart__item__item');
 
-                let shopQty = document.createElement('p');
-                shopQty.classList.add('shoppingcart__item__item__quantity');
-                shopQty.innerHTML = caddy.quantity;
-                shopItem.appendChild(shopQty);
+            let shopN = document.createElement('p');
+            shopN.classList.add('shoppingcart__item__item__name');
+            shopN.innerHTML = caddy.name;
+            shopItem.appendChild(shopN);
+            
+            let shopQty = document.createElement('p');
+            shopQty.classList.add('shoppingcart__item__item__quantity');
+            shopQty.innerHTML = `Quantité: ${caddy.quantity}`;
+            shopItem.appendChild(shopQty);
 
-                let shopN = document.createElement('p');
-                shopN.classList.add('shoppingcart__item__item__name');
-                shopN.innerHTML = caddy.name;
-                shopItem.appendChild(shopN);
-
-                let shopPr = document.createElement('p');
-                shopPr.classList.add('shoppingcart__item__item__price');
-                shopPr.innerHTML = caddy.price;
-                shopItem.appendChild(shopPr);
+            let shopPr = document.createElement('p');
+            shopPr.classList.add('shoppingcart__item__item__price');
+            shopPr.innerHTML = `Prix: ${caddy.price * caddy.quantity} €`;
+            shopItem.appendChild(shopPr);
         itemContainer.appendChild(shopItem);
     }
 }

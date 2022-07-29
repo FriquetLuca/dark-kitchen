@@ -2,8 +2,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #7b78e6;
-  color: #5b5b5b;
+  background-color: #151515;
+  color: #f4f4f4;
 }
 
 #dinner {
@@ -21,7 +21,7 @@ html, body {
   position: relative;
   border-top-right-radius: 25px;
   border-bottom-left-radius: 25px;
-  background-color: #d8ae8b;
+  background-color: #be793f;
 }
 .dinner__item__picture {
   border-top-right-radius: 25px;
@@ -37,13 +37,13 @@ html, body {
   margin-left: 10px;
   margin-right: 10px;
   font-size: large;
-  color: #19177b;
+  color: #cfcef6;
 }
 .dinner__item__content__ingredients {
   margin-left: 10px;
   margin-right: 10px;
   font-size: medium;
-  color: #5b5b5b;
+  color: #f4f4f4;
 }
 .dinner__item__command {
   position: absolute;
@@ -58,16 +58,16 @@ html, body {
   margin-right: 10px;
   margin-bottom: -30px;
   border-radius: 10px;
-  background-color: #e59eae;
+  background-color: #b9314f;
 }
 .dinner__item__command__price {
   margin-top: 10px;
-  color: #19177b;
+  color: #cfcef6;
 }
 .dinner__item__command__shop {
   margin-top: 5px;
   margin-bottom: 5px;
-  background-color: #f5c299;
+  background-color: #f1a66a;
   border-radius: 5px;
   border-color: rgb(234, 248, 108);
 }
@@ -87,8 +87,8 @@ header {
 }
 
 .nav {
-  background-color: #f5c299;
-  background: radial-gradient(circle, #f5c299 0%, rgb(218, 118, 33) 58%, #e59eae 100%);
+  background-color: #f1a66a;
+  background: radial-gradient(circle, #f1a66a 0%, rgb(218, 118, 33) 58%, #b9314f 100%);
   position: relative;
   display: flex;
   height: 50px;
@@ -133,7 +133,7 @@ header {
   width: 100%;
 }
 .nav__div__button .nav__button:hover {
-  background: radial-gradient(circle, #f5c299 0%, rgb(218, 118, 33) 58%, #e59eae 100%);
+  background: radial-gradient(circle, #f1a66a 0%, rgb(218, 118, 33) 58%, #b9314f 100%);
 }
 
 .button1 {
@@ -142,7 +142,7 @@ header {
   gap: 0px 5px;
 }
 .button1:hover {
-  background-color: #f5c299;
+  background-color: #f1a66a;
   border-radius: 10%;
 }
 
@@ -170,7 +170,7 @@ header {
   left: 0;
   height: 15px;
   width: 15px;
-  background-color: #7b78e6;
+  background-color: #151515;
   border-radius: 15px;
 }
 
@@ -189,7 +189,7 @@ header {
   top: 0px;
   width: 5px;
   height: 10px;
-  border: solid #19177b;
+  border: solid #cfcef6;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
@@ -205,7 +205,7 @@ div.button__filter {
   align-items: center;
   align-content: center;
   gap: 0px 15px;
-  background-color: #f5c299;
+  background-color: #f1a66a;
 }
 
 .button_title {
@@ -262,7 +262,7 @@ div.button__filter {
   margin-top: 20px;
   padding: 40px 0;
   color: #f0f9ff;
-  background-color: #7b78e6;
+  background-color: #151515;
 }
 
 .footer-dark h3 {
@@ -392,7 +392,7 @@ div.button__filter {
 }
 .shoppingcart__footer__checkout {
   font-family: Hind, sans-serif;
-  background-color: #f5c299;
+  background-color: #f1a66a;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.25;
@@ -404,5 +404,11 @@ div.button__filter {
   cursor: pointer;
 }
 .shoppingcart__footer__checkout :hover {
-  background-color: #d8ae8b;
+  background-color: #be793f;
+}
+
+.shoppingcart__item__item {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2px 3px;
 }

@@ -1,5 +1,5 @@
 // Dark Theme
-$light-theme: true !default;
+$light-theme: false !default;
 // Text Color
 $textColor-light: #f4f4f4;
 $textColor-dark: #cfcef6;
@@ -37,3 +37,4 @@ html, body {
 @import "title";
 @import "footer";
 @import "shoppingcart";
+@import "shoppingitems";
