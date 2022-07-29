@@ -24,10 +24,12 @@
         }
         &__quantity span {
             padding-left: 30px;
-            font-style: italic;
         }
-        &__price span {
-            font-style: italic;
+        &__quantity, &__price {
+            color: $textColor-light;
+            span {
+                font-style: italic;
+            }
         }
         &__btns {
             &__add, &__remove {
@@ -40,7 +42,7 @@
                 border-radius: 50%;
                 &:hover {
                     border: solid 1px #919191;
-                    background-color: #ffffff;
+                    background-color: $bgColor-dark;
                 }
             }
         }

@@ -3,20 +3,35 @@
     right: 10px;
     display: none;
     animation: slide 1s ease 3.5s forwards;
+    z-index: 2;
 }
 
 .shoppingcart {
-    
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    color: #5b5b5b;
-    background-color: #ffffff;
+    color: $textColor-dark;
+    background-color: $bgColor-dark;
     font-family: $hind-font;
     width: 300px;
     height: 400px;
     margin-top: 20px;
+    &:before {
+        // layout
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 100%;
+        right: 2.0em; // offset should move with padding of parent
+        border-right: 10px solid transparent;
+        border-left: 7px solid $bgColor-dark;
+        border-top: 12px solid $bgColor-dark;
+        border-bottom: 10px solid transparent;
+        transform: rotate(-180deg);
+    }
     &__footer {
         display: flex;
         align-items: center;
@@ -33,6 +48,10 @@
             display: flex;
             img {
                 height: 25px;
+                padding-left: 5px;
+                padding-right: 5px;
+                background-color: $bgColor-light;
+                border-radius: 5px;
             }
 
             &__total {
@@ -54,7 +73,7 @@
             box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
             cursor: pointer;
 
-            :hover{
+            &:hover {
                 background-color: $bgColor-middlelight;
             }
         }
