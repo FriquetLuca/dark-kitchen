@@ -201,6 +201,7 @@ div.button__filter {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
   align-content: center;
   gap: 0px 15px;
