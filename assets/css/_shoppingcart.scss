@@ -1,6 +1,8 @@
 .container {
     position: absolute;
     right: 10px;
+    display: none;
+    animation: slide 1s ease 3.5s forwards;
 }
 
 .shoppingcart {
@@ -58,3 +60,14 @@
         }
     }
 }
+
+
+@-moz-keyframes slide {
+    from {height: 0;}
+    to {height: 300px;}
+  }
+  
+@-moz-keyframes slide {
+    from {height: 0;}
+    to {height: 300px;}
+  }

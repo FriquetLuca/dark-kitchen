@@ -353,6 +353,9 @@ div.button__filter {
 .container {
   position: absolute;
   right: 10px;
+  display: none;
+  -webkit-animation: slide 1s ease 3.5s forwards;
+          animation: slide 1s ease 3.5s forwards;
 }
 
 .shoppingcart {
