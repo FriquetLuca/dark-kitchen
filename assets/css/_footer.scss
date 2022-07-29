@@ -1,7 +1,7 @@
 .footer-dark {
   margin-top: 20px;
   padding: 40px 0;
-  color: #f0f9ff;
+  color: $textColor-light;
   background-color: $bgColor-dark;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .footer-dark .item.text p a {
-  color: #f0f9ff;
+  color: $textColor-light;
 }
 
 @media (max-width: 767px) {
@@ -77,7 +77,7 @@
   display: inline-block;
   text-align: center;
   margin: 0 8px;
-  color: #fff;
+  color: $textColor-light;
   opacity: 0.75;
 }
 
