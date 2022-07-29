@@ -11,7 +11,7 @@ for (let i = 0; i < inputs.length; i++)
 // DATABASE -------------------------------------------------
 const collection = [
     {
-        name: "pizza Ananas", 
+        name: "Pizza Ananas", 
         picture: "assets/img/pananas.jpg", 
         ingredients: ["farine", "levure de boulanger", "sel", "huile d'olive", "crème de sésame noir", "tomates fraîches", "oignon rouge", "poivron rouge, mozzarella" , "chiffonnade de jambon ou blanc de poulet", "coriandre", "ananas"],
         price: 2,
@@ -36,7 +36,7 @@ const collection = [
         picture: "assets/img/brovegan.jpg", 
         ingredients: ["sel" , "poivre", "Mangue", "Avocat"],
         price: 7,
-        categories: ["brochette", "végetarien", "vegan"],
+        categories: ["brochette", "végetarien", "vegan", "fruit"],
     },
     {
         name: "Brochette Agneau", 
