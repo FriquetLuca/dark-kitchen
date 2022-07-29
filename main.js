@@ -317,10 +317,25 @@ const recreateShopElementList = () => {
             shopPr.innerHTML = `<span>Prix</span> : ${caddy.price * caddy.quantity} €`;
             shopItem.appendChild(shopPr);
 
-            let cBox = document.createElement('button');
-            shopPr.classList.add('shoppingcart__item__item__remove');
-            cBox.innerHTML = "-";
-            cBox.addEventListener ("click", function(e) {
+
+            let btnContnr = document.createElement('div');
+            btnContnr.classList.add('shoppingcart__item__item__btns');
+
+            let addBtn = document.createElement('button');
+            addBtn.classList.add('shoppingcart__item__item__btns__add');
+            addBtn.innerHTML = "+";
+            addBtn.addEventListener ("click", function(e) {
+                caddy.quantity++;
+                shopQty.innerHTML = `<span>Quantité</span> : ${caddy.quantity}`;
+                shopPr.innerHTML = `<span>Prix</span> : ${caddy.price * caddy.quantity} €`;
+                computeShopPrice();
+            });
+            btnContnr.appendChild(addBtn);
+
+            let removeBtn = document.createElement('button');
+            removeBtn.classList.add('shoppingcart__item__item__btns__remove');
+            removeBtn.innerHTML = "-";
+            removeBtn.addEventListener ("click", function(e) {
                 caddy.quantity--;
                 if(caddy.quantity <= 0)
                 {
@@ -331,10 +346,13 @@ const recreateShopElementList = () => {
                 else
                 {
                     shopQty.innerHTML = `<span>Quantité</span> : ${caddy.quantity}`;
+                    shopPr.innerHTML = `<span>Prix</span> : ${caddy.price * caddy.quantity} €`;
                     computeShopPrice();
                 }
             });
-            shopItem.appendChild(cBox);
+            btnContnr.appendChild(removeBtn);
+            
+            shopItem.appendChild(btnContnr);
         if(writing)
         {
             itemContainer.appendChild(shopItem);
