@@ -3,10 +3,10 @@
 
 ### Idée de départ du projet:
 
-##### ==Objectif principal:==
+##### Objectif principal
 - Créer un site en ligne ayant pour unique objectif un service livraison à domicile de différents menus.
 
-##### ==Directives précises:==
+##### Directives précises
 - Ce doit être un site avec une page unique,
 - Il doit y avoir une liste de plats à commander en ligne,
 - Le site doit être responsive,
@@ -38,7 +38,7 @@ Vous pouvez retrouver notre projet abouti à l'adresse ci-dessous:
 
 ### Travail réalisé par : 
 
-***- Luca Friquet***
-***- Axel Kirac***
-***- Julien Scourneau***
-***- Julien Elinckx***
+- ***Luca Friquet***
+- ***Axel Kirac***
+- ***Julien Scourneau***
+- ***Julien Elinckx***
