@@ -136,85 +136,81 @@ header {
   background: radial-gradient(circle, #f5c299 0%, rgb(218, 118, 33) 58%, #e59eae 100%);
 }
 
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #f5c299;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #e59eae;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-div.button__filter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #e59eae;
-}
-
-p.button__title {
-  font-family: Roboto, sans-serif;
-  display: flex;
-  flex-direction: center;
-  justify-content: center;
-}
-
 .button1 {
-  margin: 0px 0px 10px 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0px 5px;
 }
 .button1:hover {
   background-color: #f5c299;
   border-radius: 10%;
+}
+
+/* The switch - the box around the circle */
+.switch {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 15px;
+  width: 15px;
+}
+.switch input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #7b78e6;
+  border-radius: 15px;
+}
+
+.slider:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.switch input:checked ~ .slider:after {
+  display: block;
+}
+
+.switch .slider:after {
+  left: 5px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid #19177b;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+div.button__filter {
+  margin-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 0px 15px;
+  background-color: #f5c299;
+}
+
+.button_title {
+  padding-left: 10px;
+  font-family: Roboto, sans-serif;
 }
 
 .title {
