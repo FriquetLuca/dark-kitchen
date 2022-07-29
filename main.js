@@ -54,7 +54,7 @@ const collection = [
         picture: "assets/img/brovegan.jpg", 
         ingredients: ["sel" , "poivre", "Mangue", "Avocat"],
         price: 7,
-        categories: ["brochette", "végetarien", "vegan", "fruit"],
+        categories: ["brochette", "végétarien", "vegan", "fruit"],
     },
     {
         name: "Brochette Agneau", 
